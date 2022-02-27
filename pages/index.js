@@ -5,7 +5,6 @@ import useDarkMode from '../components/useDarkMode'
 
 const Home = () => {
   const [colorTheme, setTheme] = useDarkMode()
-
   return (
     <div className="relative flex justify-center dark:bg-black">
       <div className="flex h-screen w-full max-w-7xl flex-col">
@@ -13,7 +12,7 @@ const Home = () => {
           <title>Luigi's Birthday Countdown</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="z-10 flex cursor-pointer justify-end	">
+        <div className="z-10 mx-10 mt-10 flex cursor-pointer justify-end">
           {colorTheme === 'light' ? (
             <svg
               onClick={() => setTheme('light')}
@@ -48,10 +47,10 @@ const Home = () => {
             </svg>
           )}
         </div>
-        <div className="-mt-10 flex h-full w-full">
+        <div className="-mt-36 flex h-full w-full">
           <Countdown />
         </div>
-        <footer className="absolute bottom-0 mb-10 w-full flex-col justify-center">
+        <footer className="absolute bottom-0 mb-10 flex-col self-center">
           <div className="flex select-none justify-center dark:text-white">
             Did you like?
             <span className="ml-1 select-none font-medium">
