@@ -47,8 +47,8 @@ function Countdown() {
   }, [currentYear])
 
   return (
-    <div className="flex w-screen flex-col justify-center self-center">
-      <div className="flex flex-row justify-center self-center py-10 text-4xl font-medium ">
+    <div className="items flex w-full flex-col justify-center">
+      <div className="flex flex-row justify-center py-10 text-4xl font-medium ">
         <div className="h-12 bg-gradient-to-r from-cyan-500 to-blue-500  bg-clip-text text-transparent">
           Luigi's birthday
         </div>
