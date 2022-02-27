@@ -18,12 +18,8 @@ function Countdown() {
 
       if (difference > 0) {
         setCurrentYear(new Date().getFullYear())
-        console.log(target)
-        console.log(`Acima ${difference}`)
       } else {
         setCurrentYear(new Date().getFullYear() + 1)
-        console.log(target)
-        console.log(`Abaixo ${difference}`)
       }
 
       const d = Math.floor(difference / (1000 * 60 * 60 * 24)) // miliseconds, seconds, minutes, hours => a day
@@ -49,25 +45,25 @@ function Countdown() {
   return (
     <div className="items flex w-full flex-col justify-center">
       <div className="flex flex-row justify-center py-10 text-4xl font-medium ">
-        <div className="h-12 bg-gradient-to-r from-cyan-500 to-blue-500  bg-clip-text text-transparent">
+        <div className="h-12 select-none bg-gradient-to-r from-cyan-500  to-blue-500 bg-clip-text text-transparent">
           Luigi's birthday
         </div>
-        <span className="">🎉</span>
+        <span className="select-none">🎉</span>
       </div>
-      <div className="flex flex-row text-4xl">
+      <div className="flex select-none flex-row text-4xl">
         <div className="w-1/4 flex-col text-center">
-          <div className="font-bold">{days}</div>
-          <div className="md: text-2xl">days</div>
+          <div className="font-bold dark:text-white">{days}</div>
+          <div className="md: text-2xl dark:text-white">days</div>
         </div>
-        <div className="w-1/4 flex-col text-center">
-          <div className="font-bold">{hours}</div>
-          <div className="md: text-2xl">hours</div>
+        <div className="w-1/4 flex-col text-center dark:text-white">
+          <div className="font-bold dark:text-white">{hours}</div>
+          <div className="md: text-2xl dark:text-white">hours</div>
         </div>
-        <div className="w-1/4 flex-col text-center">
+        <div className="w-1/4 flex-col text-center dark:text-white">
           <div className="font-bold">{minutes}</div>
-          <div className="md: text-2xl">minutes</div>
+          <div className="md: text-2xl dark:text-white">minutes</div>
         </div>
-        <div className="w-1/4 flex-col text-center">
+        <div className="w-1/4 flex-col text-center dark:text-white">
           <div className="font-bold">{seconds}</div>
           <div className="md: text-2xl">seconds</div>
         </div>
