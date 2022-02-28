@@ -2,9 +2,11 @@ import Head from 'next/head'
 import Countdown from '../components/Countdown'
 import Social from '../components/Social'
 import useDarkMode from '../components/useDarkMode'
+import ToggleDarkMode from '../components/ToggleDarkMode'
 
 const Home = () => {
   const [colorTheme, setTheme] = useDarkMode()
+
   return (
     <div className="relative flex justify-center dark:bg-black">
       <div className="flex h-screen w-full max-w-7xl flex-col">
@@ -13,11 +15,11 @@ const Home = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className="z-10 mx-10 mt-10 flex justify-end">
-          {colorTheme === 'light' ? (
+          {colorTheme == 'light' && colorTheme != 'undefined' ? (
             <svg
               onClick={() => setTheme('light')}
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8  cursor-pointer stroke-white"
+              className="h-8 w-8  cursor-pointer stroke-white "
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -46,6 +48,7 @@ const Home = () => {
               />
             </svg>
           )}
+          {ToggleDarkMode()}
         </div>
         <div className="-mt-36 flex h-full w-full">
           <Countdown />
