@@ -27,3 +27,7 @@ After it, you only need to run:
 ```
 npm run dev
 ```
+### Look the application's production! 🚀
+
+<img src='https://media.discordapp.net/attachments/760587769037979660/947968086881992795/unknown.png?width=618&height=618' />
+
