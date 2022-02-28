@@ -12,12 +12,12 @@ const Home = () => {
           <title>Luigi's Birthday Countdown</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="z-10 mx-10 mt-10 flex cursor-pointer justify-end">
+        <div className="z-10 mx-10 mt-10 flex justify-end">
           {colorTheme === 'light' ? (
             <svg
               onClick={() => setTheme('light')}
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8  stroke-white "
+              className="h-8 w-8  cursor-pointer stroke-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -33,7 +33,7 @@ const Home = () => {
             <svg
               onClick={() => setTheme('dark')}
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="h-8 w-8 cursor-pointer"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
